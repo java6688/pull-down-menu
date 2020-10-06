@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简单下拉菜单</title>
+    <style type="text/css">
+      .nav{
+        width: 200px;
+        background-color: #282C3A;
+        /* 使子元素的上下外边距参照父元素 */
+        overflow: hidden;
+      }
+      .navCon{
+        text-align: center;
+        font-size: 12px;
+        background-color: white;
+      }
+      .navCon>.shrink-btn{
+        display: inline-block;
+        background-color: #282C3A;
+        color: white;
+        line-height: 25px;
+        width: 80px;
+        border-radius: 10px 10px 0 0;
+        cursor: pointer;
+      }
+      .nav>.item{
+        margin: 5px;
+        height: 50px;
+        overflow: hidden;
+      }
+      
+      .nav .menu-name{
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-weight: 500;
+        color: white;
+        background-color: #3889D4;
+        cursor: pointer;
+      }
+      .nav .sec-item{
+        display: block;
+        line-height: 50px;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        transition: 1s height;
+      }
+      
+      .nav>.item:hover,.navCon>.shrink-btn:hover{
+        opacity: .9;
+        color: gainsboro;
+      }
+      .nav .sec-item:hover{
+        background-color: gray;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="container">
+      <div class="nav">
+        <div class="navCon">
+          <span class="shrink-btn">全部收起</span>
+        </div>
+        <div class="item">
+          <div class="menu-name">菜单一</div>
+          <div class="sec-menu">
+            <a class="sec-item">item1</a>
+            <a class="sec-item">item2</a>
+            <a class="sec-item">item3</a>
+            <a class="sec-item">item4</a>
+            <a class="sec-item">item5</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="menu-name">菜单二</div>
+          <div class="sec-menu">
+            <a class="sec-item">item1</a>
+            <a class="sec-item">item2</a>
+            <a class="sec-item">item3</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="menu-name">菜单三</div>
+          <div class="sec-menu">
+            <a class="sec-item">item1</a>
+            <a class="sec-item">item2</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="menu-name">菜单四</div>
+          <div class="sec-menu">
+            <a class="sec-item">item1</a>
+            <a class="sec-item">item2</a>
+            <a class="sec-item">item3</a>
+            <a class="sec-item">item4</a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="menu-name">菜单五</div>
+          <div class="sec-menu">
+            <a class="sec-item">item1</a>
+            <a class="sec-item">item2</a>
+            <a class="sec-item">item3</a>
+            <a class="sec-item">item4</a>
+            <a class="sec-item">item5</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/clickFlowOtherShrink.js"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        clickFlowOtherShrink('item', 'menu-name', 'shrink-btn')
+      }
+    </script>
+	</body>
+</html>
